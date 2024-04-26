@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Housing Price Prediction</title>
+</head>
+<body>
+    <h2>Enter Housing Features:</h2>
+    <form action="/predict" method="post">
+        <!-- Assume we need square footage, number of bedrooms, etc. -->
+<!--        <input type="text" name="square_footage" placeholder="Enter Square Footage" required="required">-->
+        <input type="text" name="Avg. Area House Age" placeholder="Enter Age of the House" required="required">
+        <input type="text" name="Avg. Area Number of Bedrooms" placeholder="Enter Number of Bedrooms" required="required">
+        <!-- Add more inputs as necessary -->
+        <button type="submit">Predict Price</button>
+    </form>
+
+    {% if prediction_text %}
+    <h3>Prediction: {{ prediction_text }}</h3>
+    {% endif %}
+</body>
+</html>
